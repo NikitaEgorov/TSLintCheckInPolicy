@@ -117,6 +117,8 @@ namespace FileEncodingCheckInPolicy
 
         public override PolicyFailure[] Evaluate()
         {
+            ////System.Diagnostics.Debugger.Launch();
+
             PendingChange[] pendingChanges = this.GetCheckedPendingChanges();
 
             List<Violation> violations = new List<Violation>();
@@ -187,8 +189,9 @@ namespace FileEncodingCheckInPolicy
             info.RedirectStandardOutput = true;
 
             info.UseShellExecute = false;
+            info.WorkingDirectory = Path.GetDirectoryName(node);
             var process = Process.Start(info);
-            process.WaitForExit();
+            process.WaitForExit(5000);
             var log = LogJavaFailure(process);
 
             foreach (var rootObject in log)
