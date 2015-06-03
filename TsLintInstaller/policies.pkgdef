@@ -1,0 +1,2 @@
+﻿[$RootKey$\TeamFoundation\SourceControl\Checkin Policies]
+"TsLintCheckInPolicy"="$PackageFolder$\TsLintCheckInPolicy.dll"
