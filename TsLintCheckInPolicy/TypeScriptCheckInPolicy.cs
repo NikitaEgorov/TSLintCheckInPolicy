@@ -177,26 +177,40 @@ namespace FileEncodingCheckInPolicy
             var node = Path.Combine(basePath, @"Node\node.exe");
             var tslint = Path.Combine(basePath, @"Node\node_modules\tslint\bin\tslint-cli.js");
             var settings = this.GetTslintJsonPath(fileName, fileName);
+            var outputFile = Path.GetTempFileName();
 
             ProcessStartInfo info = new ProcessStartInfo(
                 node,
-                string.Format("\"{0}\" -f \"{1}\" -c \"{2}\" -t json", tslint, fileName, settings));
+                string.Format("\"{0}\" -f \"{1}\" -c \"{2}\" -o \"{3}\" -t json", tslint, fileName, settings, outputFile));
 
             info.UseShellExecute = false;
             info.CreateNoWindow = true;
-            info.RedirectStandardError = true;
-            info.RedirectStandardInput = true;
-            info.RedirectStandardOutput = true;
-
-            info.UseShellExecute = false;
             info.WorkingDirectory = Path.GetDirectoryName(node);
-            var process = Process.Start(info);
-            process.WaitForExit(5000);
-            var log = LogJavaFailure(process);
 
-            foreach (var rootObject in log)
+            Violation[] log = null;
+            try
             {
-                yield return rootObject;
+                var process = Process.Start(info);
+                process.WaitForExit(5000);
+
+                log = LogJavaFailure(outputFile);
+            }
+            finally
+            {
+                try
+                {
+                    File.Delete(outputFile);
+                }
+                catch
+                {
+                }
+            }
+            if (null != log)
+            {
+                foreach (var rootObject in log)
+                {
+                    yield return rootObject;
+                }
             }
         }
 
@@ -217,9 +231,9 @@ namespace FileEncodingCheckInPolicy
             return this.PendingCheckin.PendingChanges.CheckedPendingChanges;
         }
 
-        private static Violation[] LogJavaFailure(Process process)
+        private static Violation[] LogJavaFailure(string outputFileName)
         {
-            string errors = process.StandardOutput.ReadToEnd();
+            string errors = File.ReadAllText(outputFileName);
             if (string.IsNullOrWhiteSpace(errors))
             {
                 return new Violation[0];
