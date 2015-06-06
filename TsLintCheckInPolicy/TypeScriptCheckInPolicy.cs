@@ -191,7 +191,7 @@ namespace FileEncodingCheckInPolicy
             try
             {
                 var process = Process.Start(info);
-                process.WaitForExit(5000);
+                process.WaitForExit(10000);
 
                 log = LogJavaFailure(outputFile);
             }
@@ -216,7 +216,12 @@ namespace FileEncodingCheckInPolicy
 
         protected internal bool IsVerifyableFileType(string fileName)
         {
-            if (fileName.Contains(".generated"))
+            if (fileName == null)
+            {
+                throw new ArgumentNullException("fileName");
+            }
+
+            if (fileName.ToLowerInvariant().Contains(".generated"))
             {
                 return false;
             }
