@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TsLintCheckInPolicy</RootNamespace>
     <AssemblyName>TsLintCheckInPolicy</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -65,6 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodePosition.cs" />
+    <Compile Include="FileEncodingCheckInPolicy.cs" />
+    <Compile Include="TextFileEncodingDetector.cs" />
     <Compile Include="TsLintPolicyFailure.cs" />
     <Compile Include="Violation.cs" />
     <Compile Include="TypeScriptCheckInPolicy.cs" />
