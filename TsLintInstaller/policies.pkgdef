@@ -1,2 +1,5 @@
 ﻿[$RootKey$\TeamFoundation\SourceControl\Checkin Policies]
 "TsLintCheckInPolicy"="$PackageFolder$\TsLintCheckInPolicy.dll"
+
+[$RootKey$\TeamFoundation\SourceControl\Checkin Policies]
+"RalphJansen.StyleCopCheckInPolicy"="$PackageFolder$\RalphJansen.StyleCopCheckInPolicy.dll"
