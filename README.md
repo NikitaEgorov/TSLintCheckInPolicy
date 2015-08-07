@@ -2,7 +2,7 @@
 
 #Project Description
 
-TSLint Checkin Policy for Visual Studio
+TSLint Checkin Policy for Visual Studio (http://visualstudiogallery.msdn.microsoft.com/af70cbb7-1e0d-4d16-bc57-cccc15370c51)
 
 Check your code for TSLint errors/warnings before you can check-in your code into Team Foundation Server.
 
