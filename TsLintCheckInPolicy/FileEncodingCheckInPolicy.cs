@@ -64,7 +64,8 @@ namespace FileEncodingCheckInPolicy
                                        {
                                            ".sql", 
                                            ".cs", 
-                                           ".ts", 
+                                           ".ts",
+                                           ".vb",
                                            ".js", 
                                            ".sln", 
                                            ".csproj", 
