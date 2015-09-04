@@ -19,6 +19,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsLintInstaller2015", "TsLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckinPolicy2015", "SourceAnalysisPolicy2015\CheckinPolicy2015.csproj", "{D88F2162-80F6-481F-B60F-D837180E95B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2015", "2015", "{5FEF76F4-95FE-46D9-B20D-1DB61F5670EB}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\2015\StyleCop.CSharp.dll = Libraries\2015\StyleCop.CSharp.dll
+		Libraries\2015\StyleCop.CSharp.Rules.dll = Libraries\2015\StyleCop.CSharp.Rules.dll
+		Libraries\2015\StyleCop.dll = Libraries\2015\StyleCop.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +51,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FEF76F4-95FE-46D9-B20D-1DB61F5670EB} = {FC85D7BC-D91E-4E8A-8351-EABD9D764EBD}
 	EndGlobalSection
 EndGlobal

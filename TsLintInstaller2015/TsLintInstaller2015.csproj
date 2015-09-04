@@ -107,10 +107,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Community.StyleCop.CSharp.Rules, Version=4.4.0.0, Culture=neutral, PublicKeyToken=5e62fb8db812ab2e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Libraries\Community.StyleCop.CSharp.Rules.dll</HintPath>
-    </Reference>
     <Reference Include="StyleCop, Version=4.7.1000.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libraries\StyleCop.dll</HintPath>
