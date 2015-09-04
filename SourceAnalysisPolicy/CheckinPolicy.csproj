@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{913534C5-A9CB-418C-BEBC-989322A9CC82}</ProjectGuid>
+    <ProjectGuid>{D88F2162-80F6-481F-B60F-D837180E95B2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RalphJansen.StyleCopCheckInPolicy</RootNamespace>
@@ -75,23 +75,22 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Community.StyleCop.CSharp.Rules">
-      <HintPath>..\Libraries\Community.StyleCop.CSharp.Rules.dll</HintPath>
-    </Reference>
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PublicAssemblies\EnvDTE.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\cmmsohhv.4cy\Microsoft.TeamFoundation.VersionControl.Client.dll</HintPath>
+      <HintPath>..\Solution Items\TeamFoundation\2013\Microsoft.TeamFoundation.VersionControl.Client.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\cmmsohhv.4cy\Microsoft.TeamFoundation.WorkItemTracking.Client.dll</HintPath>
+      <HintPath>..\Solution Items\TeamFoundation\2013\Microsoft.TeamFoundation.WorkItemTracking.Client.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Microsoft.VisualStudio.Shell.14.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -103,16 +102,13 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="StyleCop, Version=4.7.1000.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="StyleCop">
       <HintPath>..\Libraries\StyleCop.dll</HintPath>
     </Reference>
-    <Reference Include="StyleCop.CSharp, Version=4.7.1000.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="StyleCop.CSharp">
       <HintPath>..\Libraries\StyleCop.CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="StyleCop.CSharp.Rules, Version=4.7.1000.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="StyleCop.CSharp.Rules">
       <HintPath>..\Libraries\StyleCop.CSharp.Rules.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -122,19 +118,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SourceAnalysisPolicy\Policy\EvaluationProcess.cs">
-      <Link>Policy\EvaluationProcess.cs</Link>
-    </Compile>
-    <Compile Include="..\SourceAnalysisPolicy\Properties\AssemblyInfo.cs">
-      <Link>Properties\AssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="..\SourceAnalysisPolicy\SourceAnalysisPolicy.cs">
-      <Link>SourceAnalysisPolicy.cs</Link>
-    </Compile>
     <Compile Include="ExtendPolicyFailure.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Policy\EvaluateOnType.cs" />
     <Compile Include="Policy\EvaluationContext.cs" />
+    <Compile Include="Policy\EvaluationProcess.cs" />
     <Compile Include="Policy\Exclusions\ExclusionAttribute.cs" />
     <Compile Include="Policy\Exclusions\FileSystem\FilePolicyExclusion.cs" />
     <Compile Include="Policy\Exclusions\FileSystem\PathExclusionType.cs" />
@@ -155,6 +143,7 @@
     <Compile Include="Policy\TfsCheckInPolicyEnvironment.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SourceAnalysisPolicy.cs" />
     <Compile Include="ThrowHelper.cs" />
     <Compile Include="UI\Controls\BrowseFileControl.cs">
       <SubType>UserControl</SubType>
@@ -221,6 +210,7 @@
       <DependentUpon>WorkItemIdEditorDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

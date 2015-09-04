@@ -106,6 +106,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SourceAnalysisPolicy\CheckinPolicy.csproj">
+      <Project>{d88f2162-80f6-481f-b60f-d837180e95b2}</Project>
+      <Name>CheckinPolicy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TsLintCheckInPolicy\TsLintCheckInPolicy.csproj">
       <Project>{b6b076bb-9e07-4436-8316-69a72807a45c}</Project>
       <Name>TsLintCheckInPolicy</Name>
@@ -115,9 +119,6 @@
     <Reference Include="Community.StyleCop.CSharp.Rules, Version=4.4.0.0, Culture=neutral, PublicKeyToken=5e62fb8db812ab2e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libraries\Community.StyleCop.CSharp.Rules.dll</HintPath>
-    </Reference>
-    <Reference Include="RalphJansen.StyleCopCheckInPolicy">
-      <HintPath>..\Libraries\RalphJansen.StyleCopCheckInPolicy.dll</HintPath>
     </Reference>
     <Reference Include="StyleCop, Version=4.7.1000.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
