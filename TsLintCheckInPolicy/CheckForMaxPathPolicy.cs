@@ -65,7 +65,7 @@ namespace FileEncodingCheckInPolicy
 
             List<PolicyFailure> failures = new List<PolicyFailure>();
 
-            foreach (PendingChange change in PendingCheckin.PendingChanges.AllPendingChanges)
+            foreach (PendingChange change in this.PendingCheckin.PendingChanges.AllPendingChanges)
             {
                 if (change.ServerItem.ToString().Length >= USER_MAX_PATH)
                 {
