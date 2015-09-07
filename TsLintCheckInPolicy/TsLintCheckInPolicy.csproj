@@ -101,6 +101,9 @@
     <Content Include="Node\node_modules\tslint\build\formatters\verboseFormatter.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\alignRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Node\node_modules\tslint\build\rules\banRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -137,6 +140,9 @@
     <Content Include="Node\node_modules\tslint\build\rules\maxLineLengthRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\memberAccessRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Node\node_modules\tslint\build\rules\memberOrderingRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -147,6 +153,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Node\node_modules\tslint\build\rules\noBitwiseRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\noConditionalAssignmentRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Node\node_modules\tslint\build\rules\noConsecutiveBlankLinesRule.js">
@@ -176,6 +185,15 @@
     <Content Include="Node\node_modules\tslint\build\rules\noEvalRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\noInternalModuleRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\noRequireImportsRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\noShadowedVariableRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Node\node_modules\tslint\build\rules\noStringLiteralRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -200,6 +218,9 @@
     <Content Include="Node\node_modules\tslint\build\rules\noUseBeforeDeclareRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\noVarKeywordRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Node\node_modules\tslint\build\rules\noVarRequiresRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -213,6 +234,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Node\node_modules\tslint\build\rules\semicolonRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\sortObjectLiteralKeysRule.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Node\node_modules\tslint\build\rules\switchDefaultRule.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Node\node_modules\tslint\build\rules\tripleEqualsRule.js">
@@ -231,9 +258,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Node\node_modules\tslint\build\rules\whitespaceRule.js">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Node\node_modules\tslint\build\tslint-tests2.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Node\node_modules\tslint\lib\tslint.js">

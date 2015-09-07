@@ -123,7 +123,10 @@ namespace FileEncodingCheckInPolicy
 
             List<Violation> violations = new List<Violation>();
             foreach (var pendingChange in
-                pendingChanges.Where(pc => pc.IsAdd || pc.IsEdit).Where(pc => this.IsVerifyableFileType(pc.FileName)))
+                pendingChanges
+                .Where(pc => pc.IsAdd || pc.IsEdit)
+                .Where(pc => !this.IsFileFromPackages(pc))
+                .Where(pc => this.IsVerifyableFileType(pc.FileName)))
             {
                 violations.AddRange(this.IsValid(pendingChange.LocalItem).ToList());
             }
@@ -181,7 +184,7 @@ namespace FileEncodingCheckInPolicy
 
             ProcessStartInfo info = new ProcessStartInfo(
                 node,
-                string.Format("\"{0}\" -f \"{1}\" -c \"{2}\" -o \"{3}\" -t json", tslint, fileName, settings, outputFile));
+                string.Format("\"{0}\" -c \"{2}\" -o \"{3}\" -t json \"{1}\"", tslint, fileName, settings, outputFile));
 
             info.UseShellExecute = false;
             info.CreateNoWindow = true;
@@ -252,6 +255,26 @@ namespace FileEncodingCheckInPolicy
             }
 
             return d;
+        }
+
+        protected internal bool IsFileFromPackages(PendingChange pendingChange)
+        {
+            if (pendingChange.ServerItem.ToLower().Contains("/packages/"))
+            {
+                return true;
+            }
+
+            if (pendingChange.ServerItem.ToLower().Contains("/bower_components/"))
+            {
+                return true;
+            }
+
+            if (pendingChange.ServerItem.ToLower().Contains("/vendor/"))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private string GetTslintJsonPath(string path, string fileName)

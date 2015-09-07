@@ -116,6 +116,16 @@ namespace FileEncodingCheckInPolicy
                 return true;
             }
 
+            if (pendingChange.ServerItem.ToLower().Contains("/bower_components/"))
+            {
+                return true;
+            }
+
+            if (pendingChange.ServerItem.ToLower().Contains("/vendor/"))
+            {
+                return true;
+            }
+
             return false;
         }
 
