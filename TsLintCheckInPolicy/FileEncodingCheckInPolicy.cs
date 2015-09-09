@@ -163,10 +163,7 @@ namespace FileEncodingCheckInPolicy
                     return true;
                 }
 
-                var buffer = new byte[4];
-                fs.Read(buffer, 0, 4);
-
-                var encoding = TextFileEncodingDetector.DetectEncoding(buffer);
+                var encoding = TextFileEncodingDetector.DetectEncoding(fs);
                 return Encoding.UTF8.Equals(encoding);
             }
         }

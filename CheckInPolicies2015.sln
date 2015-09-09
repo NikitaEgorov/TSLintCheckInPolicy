@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsLintCheckInPolicy2015", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsLintInstaller2015", "TsLintInstaller2015\TsLintInstaller2015.csproj", "{ED329375-74CB-4297-9F72-52AB2CAD2346}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckinPolicy2015", "SourceAnalysisPolicy2015\CheckinPolicy2015.csproj", "{D88F2162-80F6-481F-B60F-D837180E95B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckinPolicy2015", "SourceAnalysisPolicy2015\CheckinPolicy2015.csproj", "{913534C5-A9CB-418C-BEBC-989322A9CC82}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2015", "2015", "{5FEF76F4-95FE-46D9-B20D-1DB61F5670EB}"
 	ProjectSection(SolutionItems) = preProject
@@ -44,10 +44,10 @@ Global
 		{ED329375-74CB-4297-9F72-52AB2CAD2346}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED329375-74CB-4297-9F72-52AB2CAD2346}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED329375-74CB-4297-9F72-52AB2CAD2346}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D88F2162-80F6-481F-B60F-D837180E95B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D88F2162-80F6-481F-B60F-D837180E95B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D88F2162-80F6-481F-B60F-D837180E95B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D88F2162-80F6-481F-B60F-D837180E95B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{913534C5-A9CB-418C-BEBC-989322A9CC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{913534C5-A9CB-418C-BEBC-989322A9CC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{913534C5-A9CB-418C-BEBC-989322A9CC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{913534C5-A9CB-418C-BEBC-989322A9CC82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
