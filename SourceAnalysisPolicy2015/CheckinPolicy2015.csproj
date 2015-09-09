@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D88F2162-80F6-481F-B60F-D837180E95B2}</ProjectGuid>
+    <ProjectGuid>{913534C5-A9CB-418C-BEBC-989322A9CC82}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RalphJansen.StyleCopCheckInPolicy</RootNamespace>

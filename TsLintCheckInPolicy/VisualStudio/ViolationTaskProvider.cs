@@ -74,7 +74,7 @@ namespace TsLintCheckInPolicy.VisualStudio
 
             task.Text = string.Format("({0}) {1}", violation.ruleName, violation.failure);
 
-            this.Tasks.Add(task);
+            // this.Tasks.Add(task);
         }
 
         public void GotoError(Violation violation)

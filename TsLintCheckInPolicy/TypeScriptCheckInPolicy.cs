@@ -52,7 +52,7 @@ namespace FileEncodingCheckInPolicy
             get
             {
                 return
-                    "Install “TFS Power Tools” on every TFS client computer. Create a TFS folder “$/{Project}/TeamProjectConfig/CheckinPolicies” and add and check-in the “*.dll” file into this directory. Go to “Team Explorer|{Project}|Team members|Right-click|Personal settings…” and check “Install downloaded custom components” and uncheck “verify strong names before installing components”. Press “Download Now” and press Ok”.";
+                    "Install “TFS Power Tools” on every TFS client computer. Then install TsLintCheckinPolicy(http://visualstudiogallery.msdn.microsoft.com/23e05171-62af-437e-a6b2-6d93f3eafa95) or TsLintCheckinPolicy2015(https://visualstudiogallery.msdn.microsoft.com/9a085a1b-f2c7-4839-98cc-3f8cda49c884)";
             }
         }
 

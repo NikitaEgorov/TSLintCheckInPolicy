@@ -32,7 +32,11 @@ namespace FileEncodingCheckInPolicy
         // install the policy plug-in.
         public override string InstallationInstructions
         {
-            get { return "To install this policy, read \\\\[your server]\\[your share]\\InstallInstructions.txt or contact your local build contact."; }
+            get
+            {
+                return
+                    "Install “TFS Power Tools” on every TFS client computer. Then install TsLintCheckinPolicy(http://visualstudiogallery.msdn.microsoft.com/23e05171-62af-437e-a6b2-6d93f3eafa95) or TsLintCheckinPolicy2015(https://visualstudiogallery.msdn.microsoft.com/9a085a1b-f2c7-4839-98cc-3f8cda49c884)";
+            }
         }
 
         // This string identifies the type of policy. It is displayed in the 
