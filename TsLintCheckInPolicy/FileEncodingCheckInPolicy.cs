@@ -109,24 +109,16 @@ namespace FileEncodingCheckInPolicy
             return result.ToArray();
         }
 
+        static readonly List<string> packagesPaths = new List<string>
+        {
+            "/packages/",
+            "/bower_components/",
+            "/vendor/"
+        }; 
+
         protected internal bool IsFileFromPackages(PendingChange pendingChange)
         {
-            if (pendingChange.ServerItem.ToLower().Contains("/packages/"))
-            {
-                return true;
-            }
-
-            if (pendingChange.ServerItem.ToLower().Contains("/bower_components/"))
-            {
-                return true;
-            }
-
-            if (pendingChange.ServerItem.ToLower().Contains("/vendor/"))
-            {
-                return true;
-            }
-
-            return false;
+            return packagesPaths.Any(path => pendingChange.ServerItem.IndexOf(path, StringComparison.OrdinalIgnoreCase) >= 0);
         }
 
         protected internal bool IsVerifyableFileType(string fileName)
@@ -163,10 +155,7 @@ namespace FileEncodingCheckInPolicy
                     return true;
                 }
 
-                var buffer = new byte[4];
-                fs.Read(buffer, 0, 4);
-
-                var encoding = TextFileEncodingDetector.DetectEncoding(buffer);
+                var encoding = TextFileEncodingDetector.DetectEncoding(fs);
                 return Encoding.UTF8.Equals(encoding);
             }
         }
